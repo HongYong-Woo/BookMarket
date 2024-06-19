@@ -1,8 +1,7 @@
-
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Welcome {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -24,7 +23,7 @@ public class Main {
                 System.out.print("*");
             System.out.printf("\n메뉴 번호를 선택해주세요. : ");
             st = new StringTokenizer(br.readLine());
-            
+
             int selectMenu = Integer.parseInt(st.nextToken());
             switch (selectMenu) {
                 case 1 -> System.out.println("1번 선택 고객 정보를 확인하러 이동합니다.");
@@ -35,11 +34,11 @@ public class Main {
                 case 6 -> System.out.println("6번 선택 장바구니의 항목을 삭제합니다.");
                 case 7 -> System.out.println("7번 선택 영수증을 표시합니다.");
                 case 8 ->  {System.out.println("8번 선택 종료합니다.");
-                            exit = true;}
+                    exit = true;}
                 default -> System.out.println("잘못 입력하셨습니다. 다시 입력하쇼.");
             }
         }
 
-    br.close();
+        br.close();
     }
 }
